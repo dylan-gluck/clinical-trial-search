@@ -23,6 +23,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import { Badge } from "../ui/badge";
 
 export const ResultsView = () => {
   const results = useAppStore((state) => state.results);
@@ -39,10 +40,10 @@ export const ResultsView = () => {
 
   function handleSearch(page: number = 1) {
     setQuery(inputQuery);
-    const result = trialsService.getTrialSummaries({ 
-      query: inputQuery, 
+    const result = trialsService.getTrialSummaries({
+      query: inputQuery,
       page,
-      limit: 20 
+      limit: 20,
     });
     setResults(result.summaries);
     setCurrentPage(result.page);
@@ -58,13 +59,13 @@ export const ResultsView = () => {
   function generatePaginationItems() {
     const items = [];
     const maxVisible = 5;
-    
+
     if (totalPages <= maxVisible) {
       for (let i = 1; i <= totalPages; i++) {
         items.push(
           <PaginationItem key={i}>
-            <PaginationLink 
-              href="#" 
+            <PaginationLink
+              href="#"
               isActive={i === currentPage}
               onClick={(e) => {
                 e.preventDefault();
@@ -73,14 +74,14 @@ export const ResultsView = () => {
             >
               {i}
             </PaginationLink>
-          </PaginationItem>
+          </PaginationItem>,
         );
       }
     } else {
       items.push(
         <PaginationItem key={1}>
-          <PaginationLink 
-            href="#" 
+          <PaginationLink
+            href="#"
             isActive={1 === currentPage}
             onClick={(e) => {
               e.preventDefault();
@@ -89,25 +90,25 @@ export const ResultsView = () => {
           >
             1
           </PaginationLink>
-        </PaginationItem>
+        </PaginationItem>,
       );
-      
+
       if (currentPage > 3) {
         items.push(
           <PaginationItem key="ellipsis1">
             <PaginationEllipsis />
-          </PaginationItem>
+          </PaginationItem>,
         );
       }
-      
+
       const start = Math.max(2, currentPage - 1);
       const end = Math.min(totalPages - 1, currentPage + 1);
-      
+
       for (let i = start; i <= end; i++) {
         items.push(
           <PaginationItem key={i}>
-            <PaginationLink 
-              href="#" 
+            <PaginationLink
+              href="#"
               isActive={i === currentPage}
               onClick={(e) => {
                 e.preventDefault();
@@ -116,23 +117,23 @@ export const ResultsView = () => {
             >
               {i}
             </PaginationLink>
-          </PaginationItem>
+          </PaginationItem>,
         );
       }
-      
+
       if (currentPage < totalPages - 2) {
         items.push(
           <PaginationItem key="ellipsis2">
             <PaginationEllipsis />
-          </PaginationItem>
+          </PaginationItem>,
         );
       }
-      
+
       if (totalPages > 1) {
         items.push(
           <PaginationItem key={totalPages}>
-            <PaginationLink 
-              href="#" 
+            <PaginationLink
+              href="#"
               isActive={totalPages === currentPage}
               onClick={(e) => {
                 e.preventDefault();
@@ -141,18 +142,18 @@ export const ResultsView = () => {
             >
               {totalPages}
             </PaginationLink>
-          </PaginationItem>
+          </PaginationItem>,
         );
       }
     }
-    
+
     return items;
   }
 
   return (
-    <section className="grid grid-cols-2 min-h-screen">
-      <div className="flex flex-col px-4 gap-4">
-        <div className="flex items-center gap-1 mt-6">
+    <section className="grid grid-cols-1 min-h-screen p-10">
+      <div className="grid grid-rows-[auto 1fr] p-4 gap-4 flex-1 min-h-screen">
+        <div className="flex items-center gap-1">
           <Input
             name="search"
             value={inputQuery}
@@ -163,38 +164,52 @@ export const ResultsView = () => {
               }
             }}
           />
-          <Button type="button" variant="outline" onClick={() => handleSearch(1)}>
+          <Button
+            type="button"
+            variant="outline"
+            onClick={() => handleSearch(1)}
+          >
             <Search />
           </Button>
         </div>
-        <div className="flex flex-col space-y-4 p-4 rounded-sm border border-border">
+        <div className="grid grid-cols-1 grid-rows-[auto 1fr auto] space-y-4 p-4 rounded-sm border border-border">
           {totalResults > 0 && (
             <div className="text-sm text-muted-foreground">
-              Showing {((currentPage - 1) * 20) + 1}-{Math.min(currentPage * 20, totalResults)} of {totalResults} results
+              Showing {(currentPage - 1) * 20 + 1}-
+              {Math.min(currentPage * 20, totalResults)} of {totalResults}{" "}
+              results
             </div>
           )}
           <Table>
             <TableHeader>
               <TableRow>
                 <TableHead>ID</TableHead>
-                <TableHead>Title</TableHead>
+                <TableHead className="min-w-md">Title</TableHead>
                 <TableHead>Status</TableHead>
-                <TableHead>Conditions</TableHead>
+                <TableHead className="min-w-md">Conditions</TableHead>
                 <TableHead>Type</TableHead>
                 <TableHead>Phases</TableHead>
                 <TableHead>Enrollment Count</TableHead>
                 <TableHead>Start Date</TableHead>
                 <TableHead>Lead Sponsor</TableHead>
-                <TableHead>Locations</TableHead>
+                <TableHead className="min-w-md">Locations</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               {results.map((result) => (
                 <TableRow key={result.nctId}>
-                  <TableCell>{result.nctId}</TableCell>
-                  <TableCell>{result.briefTitle}</TableCell>
-                  <TableCell>{result.overallStatus}</TableCell>
-                  <TableCell>{result.conditions.join(", ")}</TableCell>
+                  <TableCell>
+                    <Badge variant="outline">{result.nctId}</Badge>
+                  </TableCell>
+                  <TableCell className="min-w-md whitespace-normal">
+                    {result.briefTitle}
+                  </TableCell>
+                  <TableCell>
+                    <Badge variant="secondary">{result.overallStatus}</Badge>
+                  </TableCell>
+                  <TableCell className="min-w-md whitespace-normal">
+                    {result.conditions.join(", ")}
+                  </TableCell>
                   <TableCell>{result.studyType}</TableCell>
                   <TableCell>
                     {result.phases ? result.phases.join(", ") : ""}
@@ -202,7 +217,9 @@ export const ResultsView = () => {
                   <TableCell>{result.enrollmentCount}</TableCell>
                   <TableCell>{result.startDate}</TableCell>
                   <TableCell>{result.leadSponsor}</TableCell>
-                  <TableCell>{result.locations.join(", ")}</TableCell>
+                  <TableCell className="min-w-md whitespace-normal">
+                    {result.locations.join(", ")}
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
@@ -211,28 +228,34 @@ export const ResultsView = () => {
             <Pagination>
               <PaginationContent>
                 <PaginationItem>
-                  <PaginationPrevious 
-                    href="#" 
+                  <PaginationPrevious
+                    href="#"
                     onClick={(e) => {
                       e.preventDefault();
                       if (currentPage > 1) {
                         handlePageChange(currentPage - 1);
                       }
                     }}
-                    className={currentPage <= 1 ? "pointer-events-none opacity-50" : ""}
+                    className={
+                      currentPage <= 1 ? "pointer-events-none opacity-50" : ""
+                    }
                   />
                 </PaginationItem>
                 {generatePaginationItems()}
                 <PaginationItem>
-                  <PaginationNext 
-                    href="#" 
+                  <PaginationNext
+                    href="#"
                     onClick={(e) => {
                       e.preventDefault();
                       if (currentPage < totalPages) {
                         handlePageChange(currentPage + 1);
                       }
                     }}
-                    className={currentPage >= totalPages ? "pointer-events-none opacity-50" : ""}
+                    className={
+                      currentPage >= totalPages
+                        ? "pointer-events-none opacity-50"
+                        : ""
+                    }
                   />
                 </PaginationItem>
               </PaginationContent>
