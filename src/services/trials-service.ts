@@ -82,15 +82,15 @@ class TrialsService {
     
     const summaries: TrialSummary[] = result.trials.map(trial => ({
       nctId: trial.protocolSection.identificationModule.nctId,
-      briefTitle: trial.protocolSection.identificationModule.briefTitle,
-      officialTitle: trial.protocolSection.identificationModule.officialTitle,
-      overallStatus: trial.protocolSection.statusModule.overallStatus,
+      briefTitle: trial.protocolSection.identificationModule.briefTitle || "No title available",
+      officialTitle: trial.protocolSection.identificationModule.officialTitle || "No official title available",
+      overallStatus: trial.protocolSection.statusModule?.overallStatus || "Unknown status",
       conditions: trial.protocolSection.conditionsModule?.conditions || [],
-      studyType: trial.protocolSection.designModule.studyType,
-      phases: trial.protocolSection.designModule.phases,
-      enrollmentCount: trial.protocolSection.designModule.enrollmentInfo?.count,
-      startDate: trial.protocolSection.statusModule.startDateStruct?.date,
-      leadSponsor: trial.protocolSection.sponsorCollaboratorsModule.leadSponsor.name,
+      studyType: trial.protocolSection.designModule?.studyType || "Unknown study type",
+      phases: trial.protocolSection.designModule?.phases,
+      enrollmentCount: trial.protocolSection.designModule?.enrollmentInfo?.count,
+      startDate: trial.protocolSection.statusModule?.startDateStruct?.date,
+      leadSponsor: trial.protocolSection.sponsorCollaboratorsModule?.leadSponsor?.name || "Unknown sponsor",
       locations: this.extractLocationStrings(trial),
     }));
 
@@ -124,7 +124,7 @@ class TrialsService {
     const phasesSet = new Set<string>();
     
     db.trials.forEach(trial => {
-      const phases = trial.protocolSection.designModule.phases || [];
+      const phases = trial.protocolSection.designModule?.phases || [];
       phases.forEach(phase => phasesSet.add(phase));
     });
     
@@ -138,7 +138,10 @@ class TrialsService {
     const statusesSet = new Set<string>();
     
     db.trials.forEach(trial => {
-      statusesSet.add(trial.protocolSection.statusModule.overallStatus);
+      const status = trial.protocolSection.statusModule?.overallStatus;
+      if (status) {
+        statusesSet.add(status);
+      }
     });
     
     return Array.from(statusesSet).sort();

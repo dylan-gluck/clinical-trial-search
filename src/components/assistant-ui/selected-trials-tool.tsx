@@ -18,15 +18,15 @@ export const SelectedTrialsTool = () => {
           briefTitle: trial.protocolSection.identificationModule.briefTitle,
           officialTitle:
             trial.protocolSection.identificationModule.officialTitle,
-          overallStatus: trial.protocolSection.statusModule.overallStatus,
+          overallStatus: trial.protocolSection.statusModule?.overallStatus,
           conditions: trial.protocolSection.conditionsModule?.conditions || [],
-          studyType: trial.protocolSection.designModule.studyType,
-          phases: trial.protocolSection.designModule.phases,
+          studyType: trial.protocolSection.designModule?.studyType,
+          phases: trial.protocolSection.designModule?.phases,
           enrollmentCount:
-            trial.protocolSection.designModule.enrollmentInfo?.count,
-          startDate: trial.protocolSection.statusModule.startDateStruct?.date,
+            trial.protocolSection.designModule?.enrollmentInfo?.count,
+          startDate: trial.protocolSection.statusModule?.startDateStruct?.date,
           leadSponsor:
-            trial.protocolSection.sponsorCollaboratorsModule.leadSponsor.name,
+            trial.protocolSection.sponsorCollaboratorsModule?.leadSponsor?.name,
         })),
         count: selected.length,
       };
