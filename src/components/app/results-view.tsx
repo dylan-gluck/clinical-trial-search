@@ -21,6 +21,7 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import { Badge } from "../ui/badge";
+import { Thread } from "../assistant-ui/thread";
 
 export const ResultsView = () => {
   const results = useAppStore((state) => state.results);
@@ -137,10 +138,10 @@ export const ResultsView = () => {
   }
 
   return (
-    <section className="grid grid-cols-1 min-h-screen p-10">
-      <div className="grid grid-rows-[auto 1fr] p-4 gap-4 flex-1 min-h-screen">
+    <section className="grid grid-cols-2 h-dvh">
+      <div className="flex flex-col p-4 gap-4 flex-1 h-dvh">
         <SearchInput resetPagination={true} />
-        <div className="grid grid-cols-1 grid-rows-[auto 1fr auto] space-y-4 p-4 rounded-sm border border-border">
+        <div className="flex-1 min-h-0 grid grid-cols-1 grid-rows-[auto 1fr auto] space-y-4 p-4 rounded-sm border border-border">
           {totalResults > 0 && (
             <div className="text-sm text-muted-foreground">
               Showing {(currentPage - 1) * 20 + 1}-
@@ -234,6 +235,9 @@ export const ResultsView = () => {
             </Pagination>
           )}
         </div>
+      </div>
+      <div className="grid h-dvh grid-cols-1 gap-x-2 px-4 py-4">
+        <Thread />
       </div>
     </section>
   );
