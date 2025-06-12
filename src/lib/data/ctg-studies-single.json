@@ -1,0 +1,315 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT07016633",
+      "orgStudyIdInfo": {
+        "id": "2022-I-IMM-H014-02"
+      },
+      "organization": {
+        "fullName": "Changchun Intellicrown Pharmaceutical Co. LTD",
+        "class": "INDUSTRY"
+      },
+      "briefTitle": "A Study to Evaluate the Tolerability, Pharmacokinetics, and Pharmacodynamics of IMM-H014 in Patients With MASH",
+      "officialTitle": "A Phase Ib/IIa, Randomized, Double-blind, Placebo-controlled Study to Evaluate the Tolerability, Pharmacokinetics, and Pharmacodynamics of IMM-H014 Consecutive Multiple Treatment for 12 Weeks in Adult Patients With MASH"
+    },
+    "statusModule": {
+      "statusVerifiedDate": "2025-05",
+      "overallStatus": "NOT_YET_RECRUITING",
+      "expandedAccessInfo": {
+        "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+        "date": "2025-06-10",
+        "type": "ESTIMATED"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2027-06-01",
+        "type": "ESTIMATED"
+      },
+      "completionDateStruct": {
+        "date": "2027-12-01",
+        "type": "ESTIMATED"
+      },
+      "studyFirstSubmitDate": "2025-05-26",
+      "studyFirstSubmitQcDate": "2025-06-04",
+      "studyFirstPostDateStruct": {
+        "date": "2025-06-11",
+        "type": "ESTIMATED"
+      },
+      "lastUpdateSubmitDate": "2025-06-04",
+      "lastUpdatePostDateStruct": {
+        "date": "2025-06-11",
+        "type": "ESTIMATED"
+      }
+    },
+    "sponsorCollaboratorsModule": {
+      "responsibleParty": {
+        "type": "SPONSOR"
+      },
+      "leadSponsor": {
+        "name": "Changchun Intellicrown Pharmaceutical Co. LTD",
+        "class": "INDUSTRY"
+      }
+    },
+    "oversightModule": {
+      "isFdaRegulatedDrug": false,
+      "isFdaRegulatedDevice": false
+    },
+    "descriptionModule": {
+      "briefSummary": "This study will evaluate the tolerability, pharmacokinetics, and pharmacodynamics of consecutive Multiple treatment for 12 weeks（84 Days） in Adult Patients with Metabolic Dysfunction-Associated Steatohepatitis. Participants will receive either IMM-H014 or placebo.",
+      "detailedDescription": "The study is a randomized, double-blind phase Ib/IIa trial. Subjects will receive 125mg, 225mg, 325mg and 400mg (Group 1, Group 2, Group 3 and Group 4). Each group will consist of 10 participants who will be randomly assigned to receive IMM-H014 and placebo in a ratio of 4:1(8 receiving the investigational drug and 2 receiving placebo). Administer D1-D84 on an empty stomach or after breakfast once a day for 84 consecutive days (12 weeks)."
+    },
+    "conditionsModule": {
+      "conditions": [
+        "Metabolic Dysfunction-Associated Steatohepatitis (MASH)"
+      ]
+    },
+    "designModule": {
+      "studyType": "INTERVENTIONAL",
+      "phases": [
+        "PHASE1",
+        "PHASE2"
+      ],
+      "designInfo": {
+        "allocation": "RANDOMIZED",
+        "interventionModel": "PARALLEL",
+        "primaryPurpose": "TREATMENT",
+        "maskingInfo": {
+          "masking": "DOUBLE",
+          "whoMasked": [
+            "PARTICIPANT",
+            "INVESTIGATOR"
+          ]
+        }
+      },
+      "enrollmentInfo": {
+        "count": 40,
+        "type": "ESTIMATED"
+      }
+    },
+    "armsInterventionsModule": {
+      "armGroups": [
+        {
+          "label": "IMM-H014 /Placebo(multiple dose) 125mg (Cohort 1)",
+          "type": "EXPERIMENTAL",
+          "description": "IMM-H014 /Placebo tablets administered orally once daily under fasted condition for84 Days(a total of 84 doses)",
+          "interventionNames": [
+            "Drug: IMM-H014",
+            "Drug: Placebo"
+          ]
+        },
+        {
+          "label": "IMM-H014 /Placebo(multiple dose)225mg (Cohort 1)",
+          "type": "EXPERIMENTAL",
+          "description": "IMM-H014 /Placebo tablets administered orally once daily under fasted condition for84 Days(a total of 84 doses)",
+          "interventionNames": [
+            "Drug: IMM-H014",
+            "Drug: Placebo"
+          ]
+        },
+        {
+          "label": "IMM-H014 /Placebo(multiple dose) 325mg (Cohort 1)",
+          "type": "EXPERIMENTAL",
+          "description": "IMM-H014 /Placebo tablets administered orally once daily under fasted condition for84 Days(a total of 84 doses)",
+          "interventionNames": [
+            "Drug: IMM-H014",
+            "Drug: Placebo"
+          ]
+        },
+        {
+          "label": "IMM-H014 /Placebo(multiple dose)400mg (Cohort 1)",
+          "type": "EXPERIMENTAL",
+          "description": "IMM-H014 /Placebo tablets administered orally once daily under fasted condition for84 Days(a total of 84 doses)",
+          "interventionNames": [
+            "Drug: IMM-H014",
+            "Drug: Placebo"
+          ]
+        }
+      ],
+      "interventions": [
+        {
+          "type": "DRUG",
+          "name": "IMM-H014",
+          "description": "Each group will consist of 10 participants who will be randomly assigned to receive IMM-H014 and placebo in a ratio of 4:1, once a day for a total of 12 weeks.",
+          "armGroupLabels": [
+            "IMM-H014 /Placebo(multiple dose) 125mg (Cohort 1)",
+            "IMM-H014 /Placebo(multiple dose) 325mg (Cohort 1)",
+            "IMM-H014 /Placebo(multiple dose)225mg (Cohort 1)",
+            "IMM-H014 /Placebo(multiple dose)400mg (Cohort 1)"
+          ]
+        },
+        {
+          "type": "DRUG",
+          "name": "Placebo",
+          "description": "Each group will consist of 10 participants who will be randomly assigned to receive IMM-H014 and placebo in a ratio of 4:1, once a day for a total of 12 weeks.",
+          "armGroupLabels": [
+            "IMM-H014 /Placebo(multiple dose) 125mg (Cohort 1)",
+            "IMM-H014 /Placebo(multiple dose) 325mg (Cohort 1)",
+            "IMM-H014 /Placebo(multiple dose)225mg (Cohort 1)",
+            "IMM-H014 /Placebo(multiple dose)400mg (Cohort 1)"
+          ]
+        }
+      ]
+    },
+    "outcomesModule": {
+      "primaryOutcomes": [
+        {
+          "measure": "Adverse Events following oral doses of IMM-H014 and placebo",
+          "description": "the adverse events are recorded according to the actual occurrence",
+          "timeFrame": "through study completion, up to 94 days"
+        },
+        {
+          "measure": "Number of participants with abnormal laboratory tests results and abnormal physical exam findings",
+          "description": "the adverse events are recorded according to the actual occurrence",
+          "timeFrame": "through study completion, up to 87days"
+        },
+        {
+          "measure": "PK parameters: AUCinf（AUC0-∞）",
+          "description": "AUClast is defined as the concentration of drug from time zero to the last quantifiable concentration.",
+          "timeFrame": "Up to 87days"
+        },
+        {
+          "measure": "PK parameters: Cmax",
+          "description": "Cmax is defined as the maximum observed concentration of drug in plasma.",
+          "timeFrame": "Up to 87days"
+        },
+        {
+          "measure": "PK parameter: Rac",
+          "description": "Rac (Accumulation Index) is defined as the ratio between AUC0-XX in Day XX and AUC0-XX in Day1",
+          "timeFrame": "Up to 87days"
+        },
+        {
+          "measure": "PK parameter: DF",
+          "description": "DF is defined as the percentage of fluctuation in steady state is 100 \\* (Cmax, ss - Cmin, ss)/Cavg, ss",
+          "timeFrame": "Up to 87days"
+        },
+        {
+          "measure": "Efficacy indicators：Proton Density Fat Fraction（MRI-PDFF）",
+          "description": "MRI-PDFF can objectively assess the total fat content of the liver and has been used in clinical trials to evaluate changes in liver fat content.",
+          "timeFrame": "Up to 85days"
+        }
+      ]
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Sign an informed consent form before the experiment and fully understand the content, process, and potential adverse reactions of the experiment;\n2. Voluntarily comply with the experimental requirements and conduct follow-up visits on designated dates, demonstrating good adherence to the protocol; And voluntarily maintain the original lifestyle (diet and exercise habits) during the study period without changing.\n3. Participants (including partners) agree to take effective contraceptive measures throughout the study period until 6 months after discontinuation of medication;\n4. Male and female patients aged 18 to 65 years old (including 18 and 65 years old);\n5. If suffering from hypertension, blood pressure should be stabilized at 160/100mmHg or below under monotherapy control;\n6. If the patient has type 2 diabetes, the patient must have not taken any medicine, or has received metformin, sulfonylurea or α - glycosidase inhibitor treatment, and the dose should be stable for at least 3 months;\n7. The presence of hepatic steatosis accompanied by at least one of the following cardiovascular metabolic risk factors (guidelines for the prevention and treatment of metabolism related (non-alcoholic) fatty liver disease 2024).\n\n   BMI ≥ 24.0 kg/m2, or waist circumference ≥ 90cm (male) and 85cm (female), or excessive body fat content and percentage.\n\n   Arterial blood pressure ≥ 130/85 mmHg, or under treatment with antihypertensive drugs.\n\n   Fasting blood glucose ≥ 6 1mmol /L, Or blood glucose level ≥ 7 2 hours after glucose load 8 mmol/L or HbA1c ≥ 5.7%, or history of type 2 diabetes, or HOMA-IR ≥ 2.5.\n\n   Fasting serum TG ≥ 1.70 mmol/L, or currently receiving lipid-lowering medication treatment.\n\n   Serum high-density lipoprotein ≤ 1 0 mmol/L (male) and 1 3 mmol/L (female), or currently being treated with lipid-lowering drugs.\n8. Screening period ALT ≥ ULN. Or histological evidence of NASH (NAS score ≥ 4, with inflammation and ballooning at least 1 point each, fibrosis level ≤ F3, scoring criteria in Appendix 6) obtained through liver pathological biopsy within the 6 months prior to screening or during the screening period, and no treatment or weight loss within 6 months (weight change\\<5% within 6 months);\n9. MRI-PDFF ≥ 10% within 28 days prior to enrollment.\n\nExclusion Criteria:\n\n1. Excessive alcohol consumption for three consecutive months or more within the year prior to screening (men consume an average of over 30 grams of ethanol per day, equivalent to 3.75 units of alcohol, and women consume over 20 grams, equivalent to 2.5 units of alcohol: 1 unit=285 mL of beer, 25 mL of spirits, or 100 mL of wine);\n2. Individuals with allergies (to multiple drugs or foods);\n3. Donate blood or experience significant blood loss (\\>450 mL) within the first three months of screening;\n4. Individuals with a history of weight loss surgery or those who are planning to undergo weight loss surgery recently;\n5. History of liver transplantation surgery or planned liver transplantation;\n6. Suffering from any disease that increases the risk of bleeding, such as hemorrhoids, acute gastritis, or gastric and duodenal ulcers;\n7. Liver biopsy indicates cirrhosis or previous clinical diagnosis of cirrhosis;\n8. Patients with type 1 diabetes;\n9. Uncontrolled type 2 diabetes patients (HbA1c ≥ 8.0%);\n10. Other clinically significant diseases (including but not limited to respiratory system, circulatory system, digestive system, endocrine system, rheumatic and immune system, nervous system, hematological system diseases, and psychiatric/psychological diseases) that are found to be unstable or untreated before screening;\n11. History of swallowing difficulties or any gastrointestinal diseases or surgeries that affect drug absorption;\n12. Existence of any of the following diseases or medical histories: unstable angina, myocardial infarction, percutaneous coronary intervention (allowing diagnostic angiography), coronary artery bypass surgery, heart failure, transient ischemic attack, cerebrovascular accident, etc;\n13. Currently taking medications that may cause steatosis/steatohepatitis (including amiodarone, methotrexate, steroid hormones, tetracycline, tamoxifen, valproic acid, etc.);\n14. Newly taken or irregularly taken hypoglycemic drugs (excluding metformin, sulfonylureas, or alpha glucosidase inhibitors), hepatoprotective drugs (including but not limited to reduced glutathione, glucuronide, glycyrrhetinic acid preparations, ursodeoxycholic acid, niacinamide, biphenyl diesters, liver protection tablets, silibinin, etc.), and lipid-lowering drugs (including but not limited to fibrates, statins, niacin, colexamine, etc.) within 90 days before enrollment;\n15. Currently receiving treatment with anti TNF - α drugs such as adalimumab, etanercept, etc;\n16. 28 days prior to screening or during the study period, any drugs that alter liver enzyme activity CYP3A4, including strong inhibitors and inducers that affect liver metabolic enzymes, are planned to be taken concurrently;\n17. Individuals who have consumed a special diet (including dragon fruit, mango, grapefruit, etc.) or engaged in vigorous exercise or other factors that affect drug absorption, distribution, metabolism, excretion, etc. within 2 weeks prior to enrollment;\n18. Individuals who have participated in clinical trials of other drugs within 3 months prior to medication use;\n19. Abnormal electrocardiogram with clinical significance, QTcF\\>450ms;\n20. Suspected liver and gallbladder diseases with other causes based on medical history and laboratory tests, including but not limited to: hepatitis B or C virus infection, chronic alcoholic liver disease, drug-induced liver disease, autoimmune hepatitis, primary biliary cirrhosis, primary sclerosing cholangitis, Wilson's liver disease, alpha and alpha antitrypsin deficiency, liver cancer, significant liver dysfunction (ALT or AST ≥ 5 × ULN or TBIL ≥ 1.5 × ULN), etc;\n21. Positive for HIV infection;\n22. Kidney disease or renal dysfunction with clinical significance, blood creatinine\\>1.5 × ULN, eGFR\\<60 mL/min/1.73m2 \\[calculation formula: eGFR=186 × Scr-1.154 × Age-0.203 × (0.742 female)\\], etc;\n23. Platelet count\\<100 × 109/L;\n24. Confirmation of positive and clinically significant anti nuclear antibody (ANA);\n25. TSH abnormality with clinical significance;\n26. Pregnant and lactating women or those with positive serum pregnancy tests;\n27. Patients with contraindications to MRI scanning;\n28. Have taken any alcoholic products within 24 hours prior to taking the study medication;\n29. Consumed chocolate, any caffeinated or xanthine rich food or beverage 24 hours prior to taking the study drug;\n30. Acute illness occurs from the screening stage to the study medication;\n31. Individuals who have tested positive in urine drug screening or have a history of drug abuse or use of drugs within the past five years.",
+      "healthyVolunteers": false,
+      "sex": "ALL",
+      "minimumAge": "18 Years",
+      "maximumAge": "65 Years",
+      "stdAges": [
+        "ADULT",
+        "OLDER_ADULT"
+      ]
+    },
+    "contactsLocationsModule": {
+      "centralContacts": [
+        {
+          "name": "Shiqi Bai",
+          "role": "CONTACT",
+          "phone": "18943642700",
+          "email": "baishiqi@intelli-crown.com"
+        }
+      ],
+      "overallOfficials": [
+        {
+          "name": "Yanhua Ding",
+          "affiliation": "The First Hospital of Jilin University",
+          "role": "PRINCIPAL_INVESTIGATOR"
+        },
+        {
+          "name": "Qinglong Jin",
+          "affiliation": "The First Hospital of Jilin University",
+          "role": "PRINCIPAL_INVESTIGATOR"
+        }
+      ],
+      "locations": [
+        {
+          "facility": "The first Bethune hospital of Jilin University",
+          "city": "Changchun",
+          "state": "Jilin",
+          "country": "China",
+          "contacts": [
+            {
+              "name": "Yanhua Ding",
+              "role": "CONTACT"
+            },
+            {
+              "name": "Qinglong Jin",
+              "role": "PRINCIPAL_INVESTIGATOR"
+            }
+          ],
+          "geoPoint": {
+            "lat": 43.88,
+            "lon": 125.32278
+          }
+        }
+      ]
+    }
+  },
+  "derivedSection": {
+    "miscInfoModule": {
+      "versionHolder": "2025-06-11"
+    },
+    "conditionBrowseModule": {
+      "meshes": [
+        {
+          "id": "D005234",
+          "term": "Fatty Liver"
+        }
+      ],
+      "ancestors": [
+        {
+          "id": "D008107",
+          "term": "Liver Diseases"
+        },
+        {
+          "id": "D004066",
+          "term": "Digestive System Diseases"
+        }
+      ],
+      "browseLeaves": [
+        {
+          "id": "M8375",
+          "name": "Fatty Liver",
+          "asFound": "Steatohepatitis",
+          "relevance": "HIGH"
+        },
+        {
+          "id": "M11107",
+          "name": "Liver Diseases",
+          "relevance": "LOW"
+        },
+        {
+          "id": "M8883",
+          "name": "Gastrointestinal Diseases",
+          "relevance": "LOW"
+        },
+        {
+          "id": "M7255",
+          "name": "Digestive System Diseases",
+          "relevance": "LOW"
+        },
+        {
+          "id": "T5868",
+          "name": "Visceral Steatosis",
+          "relevance": "LOW"
+        }
+      ],
+      "browseBranches": [
+        {
+          "abbrev": "BC06",
+          "name": "Digestive System Diseases"
+        },
+        {
+          "abbrev": "All",
+          "name": "All Conditions"
+        },
+        {
+          "abbrev": "Rare",
+          "name": "Rare Diseases"
+        }
+      ]
+    }
+  },
+  "hasResults": false
+}
