@@ -108,16 +108,16 @@ export interface ConditionsModule {
 
 export interface DesignModule {
   studyType: string;
-  phases: string[];
+  phases?: string[];
   designInfo: DesignInfo;
   enrollmentInfo: EnrollmentInfo;
 }
 
 export interface DesignInfo {
-  allocation: string;
-  interventionModel: string;
-  primaryPurpose: string;
-  maskingInfo: MaskingInfo;
+  allocation?: string;
+  interventionModel?: string;
+  primaryPurpose?: string;
+  maskingInfo?: MaskingInfo;
 }
 
 export interface MaskingInfo {
@@ -126,8 +126,8 @@ export interface MaskingInfo {
 }
 
 export interface EnrollmentInfo {
-  count: number;
-  type: string;
+  count?: number;
+  type?: string;
 }
 
 export interface ArmsInterventionsModule {
@@ -137,7 +137,7 @@ export interface ArmsInterventionsModule {
 
 export interface ArmGroup {
   label: string;
-  type: string;
+  type?: string;
   description: string;
   interventionNames: string[];
 }
@@ -161,11 +161,11 @@ export interface PrimaryOutcome {
 
 export interface EligibilityModule {
   eligibilityCriteria: string;
-  healthyVolunteers: boolean;
+  healthyVolunteers?: boolean;
   sex: string;
-  minimumAge: string;
-  maximumAge: string;
-  stdAges: string[];
+  minimumAge?: string;
+  maximumAge?: string;
+  stdAges?: string[];
 }
 
 export interface ContactsLocationsModule {
