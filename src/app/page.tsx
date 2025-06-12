@@ -5,6 +5,7 @@ import { useChatRuntime } from "@assistant-ui/react-ai-sdk";
 import { ResultsView } from "@/components/app/results-view";
 import { SearchView } from "@/components/app/search-view";
 import { useAppStore } from "@/state/app-store";
+import { SelectedTrialsTool } from "@/components/assistant-ui/selected-trials-tool";
 
 export default function App() {
   const query = useAppStore((state) => state.query);
@@ -15,6 +16,7 @@ export default function App() {
 
   return (
     <AssistantRuntimeProvider runtime={runtime}>
+      <SelectedTrialsTool />
       <main className="grid place-items-center min-h-screen">
         {!query && <SearchView />}
         {query && <ResultsView />}
