@@ -17,9 +17,6 @@ Clinical Trials Search combines powerful search capabilities with AI-driven conv
 - 🔍 **Advanced Search** - Search across trial titles, conditions, descriptions, and sponsors
 - 🤖 **AI Chat Assistant** - Get contextual help and insights about clinical trials
 - 📊 **Comprehensive Data** - Access detailed trial information including protocols, eligibility, and locations
-- 🎯 **Smart Filtering** - Filter by study phase, status, condition, and more
-- 📱 **Responsive Design** - Optimized for desktop and mobile devices
-- ⚡ **Fast Performance** - Built with Next.js 15 and Turbopack for optimal speed
 
 ## Quick Start
 
