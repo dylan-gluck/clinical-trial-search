@@ -178,14 +178,18 @@ export const ResultsView = () => {
                   <TableCell className="min-w-md whitespace-normal">
                     {result.conditions.join(", ")}
                   </TableCell>
-                  <TableCell>{result.studyType}</TableCell>
+                  <TableCell>
+                    <Badge variant="outline">{result.studyType}</Badge>
+                  </TableCell>
                   <TableCell>
                     {result.phases ? result.phases.join(", ") : ""}
                   </TableCell>
                   <TableCell>{result.enrollmentCount}</TableCell>
                   <TableCell>{result.startDate}</TableCell>
-                  <TableCell>{result.leadSponsor}</TableCell>
-                  <TableCell className="min-w-md whitespace-normal">
+                  <TableCell className="max-w-sm truncate">
+                    {result.leadSponsor}
+                  </TableCell>
+                  <TableCell className="max-w-md min-w-md truncate">
                     {result.locations.join(", ")}
                   </TableCell>
                 </TableRow>
