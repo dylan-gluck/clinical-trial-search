@@ -1,22 +1,8 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Search } from "lucide-react";
-import { useAppStore } from "@/state/app-store";
-import trialsService from "@/services/trials-service";
-import { useState } from "react";
+import { SearchInput } from "@/components/ui/search-input";
 
 export const SearchView = () => {
-  const setQuery = useAppStore((state) => state.setQuery);
-  const setResults = useAppStore((state) => state.setResults);
-  const [inputQuery, setInputQuery] = useState("");
-
-  function handleSearch() {
-    setQuery(inputQuery);
-    const result = trialsService.getTrialSummaries({ query: inputQuery });
-    setResults(result.summaries);
-  }
 
   return (
     <section className="container mx-auto max-w-xl text-center space-y-2 mb-40">
@@ -26,21 +12,7 @@ export const SearchView = () => {
         tortor ligula. In viverra egestas vestibulum. Maecenas et nibh a tellus
         volutpat mattis a quis neque.
       </p>
-      <div className="flex items-center gap-1 mt-6">
-        <Input
-          name="search"
-          value={inputQuery}
-          onChange={(e) => setInputQuery(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === "Enter") {
-              handleSearch();
-            }
-          }}
-        />
-        <Button type="button" variant="outline" onClick={handleSearch}>
-          <Search />
-        </Button>
-      </div>
+      <SearchInput className="mt-6" resetPagination={true} />
     </section>
   );
 };

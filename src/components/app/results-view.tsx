@@ -1,11 +1,8 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Search } from "lucide-react";
+import { SearchInput } from "@/components/ui/search-input";
 import { useAppStore } from "@/state/app-store";
 import trialsService from "@/services/trials-service";
-import { useState } from "react";
 import {
   Table,
   TableBody,
@@ -27,33 +24,22 @@ import { Badge } from "../ui/badge";
 
 export const ResultsView = () => {
   const results = useAppStore((state) => state.results);
-  const query = useAppStore((state) => state.query);
-  const setQuery = useAppStore((state) => state.setQuery);
-  const setResults = useAppStore((state) => state.setResults);
   const currentPage = useAppStore((state) => state.currentPage);
   const setCurrentPage = useAppStore((state) => state.setCurrentPage);
   const totalPages = useAppStore((state) => state.totalPages);
-  const setTotalPages = useAppStore((state) => state.setTotalPages);
   const totalResults = useAppStore((state) => state.totalResults);
-  const setTotalResults = useAppStore((state) => state.setTotalResults);
-  const [inputQuery, setInputQuery] = useState(query);
-
-  function handleSearch(page: number = 1) {
-    setQuery(inputQuery);
-    const result = trialsService.getTrialSummaries({
-      query: inputQuery,
-      page,
-      limit: 20,
-    });
-    setResults(result.summaries);
-    setCurrentPage(result.page);
-    setTotalPages(result.totalPages);
-    setTotalResults(result.total);
-  }
 
   function handlePageChange(page: number) {
     setCurrentPage(page);
-    handleSearch(page);
+    const query = useAppStore.getState().query;
+    const result = trialsService.getTrialSummaries({
+      query,
+      page,
+      limit: 20,
+    });
+    useAppStore.getState().setResults(result.summaries);
+    useAppStore.getState().setTotalPages(result.totalPages);
+    useAppStore.getState().setTotalResults(result.total);
   }
 
   function generatePaginationItems() {
@@ -153,25 +139,7 @@ export const ResultsView = () => {
   return (
     <section className="grid grid-cols-1 min-h-screen p-10">
       <div className="grid grid-rows-[auto 1fr] p-4 gap-4 flex-1 min-h-screen">
-        <div className="flex items-center gap-1">
-          <Input
-            name="search"
-            value={inputQuery}
-            onChange={(e) => setInputQuery(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                handleSearch(1);
-              }
-            }}
-          />
-          <Button
-            type="button"
-            variant="outline"
-            onClick={() => handleSearch(1)}
-          >
-            <Search />
-          </Button>
-        </div>
+        <SearchInput resetPagination={true} />
         <div className="grid grid-cols-1 grid-rows-[auto 1fr auto] space-y-4 p-4 rounded-sm border border-border">
           {totalResults > 0 && (
             <div className="text-sm text-muted-foreground">
